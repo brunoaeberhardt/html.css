@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no GitHub</a></p> <!--Colocar URL completa no href-->
+    <p>Você também pode acessar o <a href="https://youtube.com/cursoemvideo" target="_blank" rel="external">meu canal gratuito no Youtube</a></p>
+    <!--
+Dentro do atributo target="", podemos utilizar os seguintes valores:
+
+    _blank indica que o link vai abrir em uma nova janela em branco;
+    _slef indica que vai abrir o link na janela ou frame atual(padrão);
+    _top indica que vai desfazer todos os frames e abrir o destino no navegador completo;
+    _parent similar ao udo do _top em uma referência à janela mãe nom-do-frame caso esteja usando frames, indicar o nome da janela a abrir
+
+Dentro do atributo rel="", podemos utilizar os seguintes valores:
+
+    next indica que o link é para a próxima parte do documento atual;
+    prev indica que o link é para a parte anterior do documento atual;
+    author indica que é um link para o site do autor do artigo atual;
+    external indica que é um link para outro site que não faz parte do artigo;
+    nofollow indica que você não dá o aval para o conteúdo
+    dofollow indica que você da o aval para o conteúdo
+
+-->
+
+<h1>Trabalhando com links internos</h1>
+<p>Está é a primeira página do site. Se voc~e quiser, pode acessar também a <a href="pag002.html" rel="next" target="_self">minha segunda página</a></p>
+<p>Você também pode acessar a <a href="noticias/pag003.html" rel="next" target="_self">nossa página de notícias</a>.</p>
+
+<h1>Links para download</h1>
+<ul>
+    <li><a href="livro/Bo identidade.pdf" download="Bo identidade.pdf" type="application/pdf">Baixar livro em pdf</a></li>
+    <li><a href="livro/Bo identidade.zip.zip" download="Bo identidade.pdf" type="application/zip">Livro compactado em ZIP</a></li>
+</ul>
+</body>
+</html>
+

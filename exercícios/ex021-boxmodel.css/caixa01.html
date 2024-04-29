@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        h1 { /*É box-level, mas você pode mudar pra inline-level, com a característica display:inline; */
+            background-color:lightgray;
+            height: 300px; /*Altura*/
+            width: 300px; /*Largura*/
+
+            border-width: 10px; /*Largura da borda*/
+            border-style: groove; /*Esilo da borda*/
+            border-color: darkslategray; /*Cor da borda*/
+            
+            /*
+            O código de cima pode ser simplicado utilizando shorthand da seguinte forma:
+            border: border width border-style border-color;
+            border: 10px groove darkslategray;*/
+
+            /*Padding-distância da caixa do texto a borda*/
+            /*Configurar padding no sentido horário top-right-bottom-left*/
+            padding-top:10px;
+            padding-right: 10px;
+
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            /*O código de cima pode ser simplicado utilizando shorthand da seguinte forma:
+            padding: padding-top padding-right padding-bottom padding-left;
+            padding: 10px;  SE TODOS TAMANHOS FOREM IGUAIS
+            padding:10px 20px;    ======   padding:10px 20px 10px 20px;
+            padding: 10px;*/
+
+            /*
+            Para centralizar a margin automáticamente,pode-se usar a definição:
+            margin:auto;
+            */
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 40px;
+            margin-left: 10px;
+
+            /*O código de cima pode ser simplicado utilizando shorthand da seguinte forma:
+            margin: margin-top margin-right margin-bottom margin-left;
+            margin: 10px 10px 40px 10px;
+            margin: 10px auto 40px auto; A MARGEN DA DIREITA E ESQUERDA SERAO AUTOMATICAS*/
+
+            outline-width: 5px; /*Largura do contorno*/
+            outline-style:double; /*Tipo do  contorno*/
+            outline-color: chartreuse; /*Cor do contorno*/
+
+            /*O código de cima pode ser simplicado utilizando shorthand da seguinte forma:
+            outline: outline-width outline-style outline-color 
+            outline: 5px double chartreuse*/
+            
+            
+        }
+        a { /*
+            É inline-level, mas você pode mudar pra box-level, com a característica display:block;
+            */
+            border-width: 4px; /*Tamanho largura da borda*/
+            border-style: double; /*Estilo da borda*/
+            border-color: rgb(103, 120, 216); /*Cor da borda*/
+
+            /*border: 4px double rgb(103, 120, 216)*/
+            
+            /*Padding-distância da caixa do texto a borda*/
+            padding-top:10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            /*padding: 10px;*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de caixas box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

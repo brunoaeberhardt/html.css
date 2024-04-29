@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplestemente aumente e dimunua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"><!--Se ele for até 750px, carregará a foto pequena-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"> <!--Se ele for menor do que 1050px, ele carregará a foto média-->
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">
+    </picture>
+
+    <h1>Reproduzindo aúdio</h1>
+    <p>Vamos aprenderá reproduzir aúdios em HTML5.</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/fantasyland.mp3.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.mp3" type="aduio/ogg">
+        <source src="midia/guanacast-33.mp3" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir aúdios <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo</a></p>
+    </audio>
+    <!--<audio src="midia/fantasyland.mp3.mp3" controls autoplay></audio>
+    MP3 WAV OGG-->
+</body>
+</html>
