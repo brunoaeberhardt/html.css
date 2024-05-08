@@ -7,17 +7,24 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background-color: lightblue;
         }
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         caption {
             background-color: lightgray;
             color: rgb(77, 77, 77);
-            font-size: 1.3em;
+            font-size: 1.5em;
             padding: 3px;
             font-weight: bolder;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -5px;
+            background-color: gray;
         }
         td, th {
             border: 1px solid black;
@@ -26,6 +33,12 @@
         thead, tfoot{
             background-color: gray;
             color: white;
+        }
+        tbody > tr:nth-child(odd) { /* (2n-1) */
+            background-color: lightgray; 
+        }
+        tbody > tr:nth-child(even) { /* (2n) */
+            background-color: white;
         }
         td.num {
             text-align: center;
@@ -40,8 +53,9 @@
     <!-- 
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION(TÍTULO)
             THEAD
-                TR, TD, TH 
+                TR(linha), TD(dado), TH(título de dado) 
             TBODY
                 TR, TD, TH
             TFOOT
@@ -51,9 +65,9 @@
         <caption>População das Unidades federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
-                <th>% da população total</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="col" style="width: 50px;">% da população total</th>
             </tr>
         </thead>
         <tbody>
@@ -194,10 +208,15 @@
             </tr>
         </tbody>
         <tfoot>
-            <th style="text-align: left;">Total de habitantes</th>
+            <th style="text-align: left;" scope="row">Total de habitantes</th>
             <td class="num"><strong>210 147 125</strong></td>
             <td class="por">100%</td>
         </tfoot>
      </table>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, incidunt illo, aperiam animi nemo nulla eius id quas ipsa non beatae sequi et saepe. Ea, minus. Quia aliquam autem voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eum hic pariatur voluptatum modi quas aut quaerat, nisi rerum ipsum id. Sit eius natus dicta sapiente qui, nihil voluptates quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolore, eos at aspernatur alias, reiciendis dolorem iure praesentium velit vitae molestiae laborum enim repellendus consectetur, dolorum laudantium sint? Laboriosam, quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequatur amet doloribus sequi laborum fuga distinctio quibusdam dolores iusto repudiandae, atque aspernatur nulla minus iure minima exercitationem, sunt ratione. Iste.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, incidunt illo, aperiam animi nemo nulla eius id quas ipsa non beatae sequi et saepe. Ea, minus. Quia aliquam autem voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eum hic pariatur voluptatum modi quas aut quaerat, nisi rerum ipsum id. Sit eius natus dicta sapiente qui, nihil voluptates quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolore, eos at aspernatur alias, reiciendis dolorem iure praesentium velit vitae molestiae laborum enim repellendus consectetur, dolorum laudantium sint? Laboriosam, quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequatur amet doloribus sequi laborum fuga distinctio quibusdam dolores iusto repudiandae, atque aspernatur nulla minus iure minima exercitationem, sunt ratione. Iste.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, incidunt illo, aperiam animi nemo nulla eius id quas ipsa non beatae sequi et saepe. Ea, minus. Quia aliquam autem voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eum hic pariatur voluptatum modi quas aut quaerat, nisi rerum ipsum id. Sit eius natus dicta sapiente qui, nihil voluptates quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolore, eos at aspernatur alias, reiciendis dolorem iure praesentium velit vitae molestiae laborum enim repellendus consectetur, dolorum laudantium sint? Laboriosam, quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequatur amet doloribus sequi laborum fuga distinctio quibusdam dolores iusto repudiandae, atque aspernatur nulla minus iure minima exercitationem, sunt ratione. Iste.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, incidunt illo, aperiam animi nemo nulla eius id quas ipsa non beatae sequi et saepe. Ea, minus. Quia aliquam autem voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eum hic pariatur voluptatum modi quas aut quaerat, nisi rerum ipsum id. Sit eius natus dicta sapiente qui, nihil voluptates quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolore, eos at aspernatur alias, reiciendis dolorem iure praesentium velit vitae molestiae laborum enim repellendus consectetur, dolorum laudantium sint? Laboriosam, quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequatur amet doloribus sequi laborum fuga distinctio quibusdam dolores iusto repudiandae, atque aspernatur nulla minus iure minima exercitationem, sunt ratione. Iste.</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, incidunt illo, aperiam animi nemo nulla eius id quas ipsa non beatae sequi et saepe. Ea, minus. Quia aliquam autem voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae eum hic pariatur voluptatum modi quas aut quaerat, nisi rerum ipsum id. Sit eius natus dicta sapiente qui, nihil voluptates quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolore, eos at aspernatur alias, reiciendis dolorem iure praesentium velit vitae molestiae laborum enim repellendus consectetur, dolorum laudantium sint? Laboriosam, quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti consequatur amet doloribus sequi laborum fuga distinctio quibusdam dolores iusto repudiandae, atque aspernatur nulla minus iure minima exercitationem, sunt ratione. Iste.</p>
 </body>
 </html>
