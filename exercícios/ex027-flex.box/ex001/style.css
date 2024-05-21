@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #27272a;
+}
+.container {
+    display: flex;
+    gap: 10px 10px; /* Espaço entre as flexbox */
+    background-color: #6366f1;
+    /* flex-wrap: wrap; */
+    height: 600px; 
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+    /*
+    Algumas propriedades da Flex Box:
+    flex-wrap: wrap; no-wrap(padrao), wrap - Quebra a linha quando não tiver mais espaço 
+    flex-flow: column wrap;  shorthand 
+    flex-direction: row-reverse;  Direção do do container 
+    */
+}
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: #38bdf8;
+}
+.item-3 {
+    order: 3;
+    /* align-self: flex-end; */
+    /* flex-basis: 100px; */ /* Diminui proporcionalmente */
+    /* flex: 2 2 100px; */ /* shorthand = flex-grow, flex-shrink e flex-basis */
+}
+/* .item-6 { 
+    flex-grow: 2;} /* Aumenta proporcionalmente */
+
+.item-6 {
+    order: -1; /* Ordem da caixa */
+}
